@@ -1,0 +1,43 @@
+{
+  "contents": [
+    {
+      "container": "#page2 .content",
+      "header": "Über mich",
+      "content": [
+        {
+          "paragraph": "Hallo! Ich bin Nadine Rickmann, Webentwicklerin mit Hintergrund in der Software-Entwicklung und einem tiefen Interesse an modernen Webtechnologien. Anfang oktober diesen Jahres habe ich meine Weiterbildung zur Webentwicklerin erfolgreich abgeschlossen."
+        },
+        {
+          "paragraph": "Mit einem Bachelor in Medieninformatik und ca. 2,5 Jahren Berufserfahrung als Software-Entwicklerin habe ich bereits Erfahrungen in der Programmierung mit dem Framework React, sowie einigen Aspekten der Barrierefreiheit sammeln können."
+        },
+        {
+          "paragraph": "Meine Leidenschaft liegt darin, benutzerfreundliche und effiziente Webseiten zu entwickeln, die durch sauberen Code und reibungslose Funktionalität überzeugen. Deshalb mache ich aktuell eine Weiterbildung zur JavaScript-Entwicklerin, um mein Wissen in den Bereichen HTML, CSS, JavaScript sowie modernen Frameworks wie React weiter auszubauen und dynamische, interaktive Webanwendungen entwickeln zu können."
+        }
+      ]
+    },
+    {
+      "container": "#page3 .content",
+      "header": "Meine Projekte",
+      "content": [
+        {
+          "paragraph": "Hier findest du bald eine Auswahl meiner eigenen Projekte."
+        }
+      ]
+    },
+    {
+      "container": "#page4 .content",
+      "header": "Kontakt",
+      "content": [
+        {
+          "paragraph": "Ich freue mich darauf, meine Erfahrungen und mein Wissen einzubringen, um zur technischen Umsetzung digitaler Projekte beizutragen."
+        },
+        {
+          "paragraph": "Wenn Du jemanden suchst, der sowohl die technischen als auch die kreativen Aspekte einer Webanwendung versteht, dann freue ich mich auf eine Zusammenarbeit!"
+        },
+        {
+          "paragraph": "Bei Interesse schreibe mir direkt eine E-Mail, ruf mich an oder nutze das Kontaktformular."
+        }
+      ]
+    }
+  ]
+}

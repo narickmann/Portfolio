@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Unbenannter_Verlauf_3);
+      }
+
+      .cls-2 {
+        font-size: 68px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Literata-Medium, Literata;
+        font-variation-settings: 'opsz' 12, 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        font-size: 48px;
+      }
+    </style>
+    <linearGradient id="Unbenannter_Verlauf_3" data-name="Unbenannter Verlauf 3" x1="2.93" y1="2.93" x2="147.07" y2="147.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff8243"/>
+      <stop offset=".66" stop-color="#fc5369"/>
+      <stop offset="1" stop-color="#fc4079"/>
+    </linearGradient>
+  </defs>
+  <g id="Hintergrund">
+    <rect class="cls-1" width="150" height="150" rx="10" ry="10"/>
+  </g>
+  <g id="Schrift">
+    <text class="cls-3" transform="translate(21.72 70.97)"><tspan class="cls-2"><tspan x="0" y="0">NR</tspan></tspan><tspan class="cls-4"><tspan x="14.59" y="53">&lt;/&gt;</tspan></tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,299 @@
+@charset "utf8";
+
+@font-face {
+  font-display: swap;
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Literata';
+  src: url('../fonts/Literata-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Literata", sans-serif;
+  font-variation-settings: 'wght' 600;
+  font-variant: small-caps;
+}
+
+h1,
+h2 {
+  display: inline;
+  color: #ffa600;
+  background-image: linear-gradient(135deg, #ffa600 0%, #fc4079 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html {
+  font: 1.3rem "Quicksand", sans-serif;
+  font-variation-settings: 'wght' 400;
+  scroll-behavior: smooth;
+}
+
+
+/* ----------------------------------------------- */
+/* ------------------- Header -------------------- */
+/* ----------------------------------------------- */
+#topheader {
+  background: #121212;
+  color: #F5F5F5;
+  height: 150px;
+  padding: 2%;
+  font-size: 1.2rem;
+  box-shadow: 0 0 5px 5px rgba(18, 18, 18, 0.4);
+}
+
+#topnav ul {
+  list-style: none;
+}
+
+#topnav a {
+  color: #F5F5F5;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-variant: small-caps;
+  transition: 0.5s;
+}
+
+main {
+  background: #1a1a1a;
+  color: #F5F5F5;
+  overflow: hidden;
+  min-height: 1000px;
+}
+
+/* ----------------------------------------------- */
+/* ------------------- Footer -------------------- */
+/* ----------------------------------------------- */
+#footer {
+  background: #121212;
+  color: #F5F5F5;
+  height: 120px;
+}
+
+#footer a {
+  color: #F5F5F5;
+  text-decoration: none;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+/* ----------------------------------------------- */
+/* -------------- Section 1 - Start -------------- */
+/* ----------------------------------------------- */
+#page1 {
+  background: #121212;
+  /* max-height: calc(100vh - 150px); */
+  /* min-height: 100vh; */
+  /* padding-top: 150px; */
+}
+
+.hero_image {
+  flex-grow: 1;
+  flex-basis: 50%;
+  position: relative;
+}
+
+.hero_text {
+  position: absolute;
+  inset: 0 50% 0 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2%;
+  text-align: center;
+}
+
+.hero_text>* {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.h2 {
+  font-size: 1.2rem;
+}
+
+/* ----------------------------------------------- */
+/* ------------ Section 2 - Über mich ------------ */
+/* ----------------------------------------------- */
+.skill_container {
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+.rahmen:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.rahmen {
+  min-width: 250px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.html_skill {
+  border: 5px solid #e34f26;
+  background: #ef652a;
+  box-shadow: 0 0 10px 5px rgba(239, 101, 42, 0.2);
+
+}
+
+.css_skill {
+  border: 5px solid #264de4;
+  background: #2965f1;
+  box-shadow: 0 0 10px 5px rgba(41, 101, 241, 0.4);
+}
+
+.jq_skill {
+  border: 5px solid #0868ac;
+  background: #76cef2;
+  box-shadow: 0 0 10px 5px rgba(118, 207, 242, 0.2);
+}
+
+.js_skill {
+  border: 5px solid #f7e018;
+  background: #ffbb00;
+  box-shadow: 0 0 10px 5px rgba(255, 187, 0, 0.2);
+}
+
+.skill_icon {
+  margin: 1rem auto;
+  width: 150px;
+  height: 150px;
+  transform: scale(1);
+  transition: 1s;
+}
+
+.rahmen:hover .skill_icon {
+  transform: scale(2.5) translateY(10%);
+}
+
+.rahmen figcaption {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  height: 350px;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  transition: 1s;
+}
+
+.rahmen:hover figcaption {
+  top: 0;
+}
+
+#page2 figcaption p {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  margin: 0.5rem auto;
+}
+
+#page2 figcaption small {
+  color: #aaa
+}
+
+/* ----------------------------------------------- */
+/* ---------- generelle Klassen/Elemente --------- */
+/* ----------------------------------------------- */
+article[id*="page"] {
+  box-shadow: 0 0 5px 5px rgba(18, 18, 18, 0.4);
+  padding: 2% 4%;
+  min-height: 100vh;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  line-height: 1.6rem;
+  /* font-size: 1rem; */
+  margin: 1rem 0;
+}
+
+.button {
+  line-height: 48px;
+  margin: 1rem;
+  padding: 0 1rem;
+  display: block;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(120deg, #ffa600 0%, #fc4079 60%);
+  color: #000;
+  font-variation-settings: 'wght' 600;
+  text-align: center;
+}
+
+.button,
+.button-link {
+  box-shadow: 0 0 5px 5px rgba(18, 18, 18, 0.6);
+}
+
+i {
+  padding-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------------------- */
+/* ----------------- Flex-Klassen ---------------- */
+/* ----------------------------------------------- */
+.flex_container {
+  display: flex;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.flex_jc_between {
+  justify-content: space-between;
+}
+
+.flex_jc_around {
+  justify-content: space-around;
+}
+
+.flex_jc_even {
+  justify-content: space-evenly;
+}
+
+.flex_jc_center {
+  justify-content: center;
+}
+
+.flex_ai_center {
+  align-items: center;
+}

@@ -1,0 +1,84 @@
+{
+    "skills": [
+        {
+            "name": "HTML",
+            "desc": "Fundierte Kenntnisse in HTML zur Erstellung und Strukturierung barrierefreier, SEO-freundlicher Webseiten.",
+            "class": "html_skill",
+            "img": {
+                "src": "HTML5_Badge.svg",
+                "alt": "HTML5 Logo"
+            },
+            "keywords": [
+                {
+                    "keyword": "SEO"
+                },
+                {
+                    "keyword": "Semantisches HTML"
+                },
+                {
+                    "keyword": "Accessibility"
+                }
+            ]
+        },
+        {
+            "name": "CSS",
+            "desc": "Fundierte CSS-Kenntnisse für barrierefreie, responsive und SEO-optimierte Webseiten mit Flexbox, Grid und modernen Layout-Techniken.",
+            "class": "css_skill",
+            "img": {
+                "src": "CSS3_logo.svg",
+                "alt": "CSS3 Logo"
+            },
+            "keywords": [
+                {
+                    "keyword": "Flexbox"
+                },
+                {
+                    "keyword": "Grid"
+                },
+                {
+                    "keyword": "Responsives Design"
+                }
+            ]
+        },
+        {
+            "name": "jQuery",
+            "desc": "Grundkenntnisse in jQuery zur DOM-Manipulation, Animation und Verbesserung der Benutzerinteraktion.",
+            "class": "jq_skill",
+            "img": {
+                "src": "JQuery_icon.svg",
+                "alt": "jQuery Logo"
+            },
+            "keywords": [
+                {
+                    "keyword": "Dom-Manipulation"
+                },
+                {
+                    "keyword": "Animationen"
+                },
+                {
+                    "keyword": "jQuery-Selectors"
+                }
+            ]
+        },
+        {
+            "name": "JavaScript",
+            "desc": "Grundkenntnisse in JavaScript zur Anpassung von dynamischen Inhalten, interaktiven Features und Verbesserung der Funktionalität.",
+            "class": "js_skill",
+            "img": {
+                "src": "Javascript_Logo_480.png",
+                "alt": "JavaScript Logo"
+            },
+            "keywords": [
+                {
+                    "keyword": "ES6+"
+                },
+                {
+                    "keyword": "DOM-Manipulation"
+                },
+                {
+                    "keyword": "Event Handling"
+                }
+            ]
+        }
+    ]
+}

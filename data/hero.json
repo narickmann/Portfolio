@@ -1,0 +1,43 @@
+{
+  "hero": 
+    {
+      "container": "#page1",
+      "header": "Nadine Rickmann<br>Webentwicklerin",
+      "content": [
+        {
+          "paragraph": "Ich bin"
+        },
+        {
+          "paragraph": "auf der Suche nach neuen Herausforderungen"
+        }
+      ],
+      "img": {
+        "src": "NR_1000.webp",
+        "alt": "Foto: Nadine Rickmann - Webentwicklerin"
+      },
+      "source": [
+        {
+          "media": "(max-width: 500px)",
+          "srcset": "NR_500.webp"
+        },
+        {
+          "media": "(max-width: 1000px)",
+          "srcset": "NR_1000.webp"
+        },
+        {
+          "media": "(max-width: 1500px)",
+          "srcset": "NR_1500.webp"
+        },
+        {
+          "media": "(max-width: 2000px)",
+          "srcset": "NR_2000.webp"
+        }
+      ],
+      "button": {
+        "content": "Kontakt aufnehmen",
+        "href": "#page4",
+        "icon": "fa-regular fa-comments"
+      }
+    }
+  
+}
