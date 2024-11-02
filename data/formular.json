@@ -1,0 +1,66 @@
+{
+  "form": {
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "id": "vname",
+        "name": "Vorname",
+        "label": "Vorname",
+        "required": true
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "id": "nname",
+        "name": "Nachname",
+        "label": "Nachname",
+        "required": true
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "id": "mail",
+        "name": "E-Mail",
+        "label": "Deine E-Mail-Adresse",
+        "required": true
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "id": "betreff",
+        "name": "Betreff",
+        "label": "Betreff",
+        "required": true
+      },
+      {
+        "tag": "textarea",
+        "id": "nachricht",
+        "name": "Nachricht",
+        "label": "Deine Nachricht an mich ...",
+        "placeholder": "",
+        "rows": 5,
+        "required": true
+      }
+    ],
+    "checkbox": {
+      "tag": "input",
+      "type": "checkbox",
+      "id": "dschutz",
+      "name": "Datenschutz",
+      "value": "anerkannt",
+      "label": "Ich habe die [LINK] zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Bearbeitung der Anfrage elektronisch erhoben und gespeichert werden.",
+      "link": {
+        "text": "Datenschutzerklärung",
+        "href": "#"
+      },
+      "required": true
+    },
+    "submit": {
+      "tag": "button",
+      "type": "submit",
+      "value": "<i class=\"fa-regular fa-paper-plane\"></i> Absenden",
+      "class": "button"
+    }
+  }
+}

@@ -25,11 +25,13 @@ const ajax = {
       for (let skill of payload.skills) {
         render.createSkill(skill);
       }
+    } else if (payload.form) {
+      console.log("payload.form", payload.form);
+      render.createFormular(payload.form);
     }
     else {
-      console.log('Keine Skills, was anderes');
+      console.warn('Inhalt konnte nicht geladen werden.');
     }
-
   },
 
   loadData(file) {

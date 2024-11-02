@@ -42,6 +42,23 @@ const dom = {
     
     return el;
   },
+  createField(
+    tag = false,
+    type = false,
+    id = false,
+    name = false,
+    parent = false,
+    required = false
+  ) {
+    const el = document.createElement(tag);
+    if (type) el.type = type;
+    if (id) el.id = id;
+    if (name) el.name = name;
+    if (required) el.required = required;
+    if (parent) parent.append(el);
+    
+    return el;
+  },
   $(selector) {
     return document.querySelector(selector);
   },
@@ -52,7 +69,8 @@ const dom = {
     elements.parentContents = dom.$('main');
     elements.hero = dom.$('#page1');
     elements.article = dom.$$('article[id*="page"]');
-    elements.nav = dom.$$('#topnav a')
+    elements.nav = dom.$$('#topnav a');
+    elements.form = dom.$('form');
   }
 }
 

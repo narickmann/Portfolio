@@ -223,6 +223,94 @@ main {
 }
 
 /* ----------------------------------------------- */
+/* ------------- Section 4 - Kontakt ------------- */
+/* ----------------------------------------------- */
+
+form {
+  margin-top: 1rem;
+}
+
+.input_label>input {
+  height: 48px;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+input,
+textarea {
+  background: #121212;
+  color: #F5F5F5;
+  font: 1rem "Quicksand", sans-serif;
+  resize: vertical;
+  border: none;
+  border-bottom: 3px solid #bdbdbd;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 3px solid #ffa600;
+}
+
+.input_label {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.input_label>label {
+  padding: 0 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  line-height: 48px;
+  cursor: text;
+  transition: 0.3s;
+}
+
+.input_label input:focus+label,
+.input_label input:valid+label,
+textarea:focus+label,
+textarea:not(:placeholder-shown)+label {
+  color: #bdbdbd;
+  top: -40px;
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
+.input_label>label.warning {
+  color: #fc4079;
+  top: -40px;
+  font-size: 0.9rem;
+}
+
+form .button {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.ds_label {
+  font: 0.8rem "Quicksand", sans-serif;
+  margin-bottom: 2rem;
+  line-height: 1.2rem;
+}
+
+.ds_label a {
+  color: #F5F5F5;
+}
+
+.ds_checker {
+  transform: scale(1.2);
+  accent-color: #ffa600;
+}
+
+/* ----------------------------------------------- */
 /* ---------- generelle Klassen/Elemente --------- */
 /* ----------------------------------------------- */
 article[id*="page"] {
@@ -252,14 +340,15 @@ p {
   border: none;
   border-radius: 5px;
   background: linear-gradient(120deg, #ffa600 0%, #fc4079 60%);
+  box-shadow: 0 0 10px 5px rgba(18, 18, 18, 0.6);
   color: #000;
   font-variation-settings: 'wght' 600;
   text-align: center;
+  cursor: pointer;
 }
 
-.button,
-.button-link {
-  box-shadow: 0 0 5px 5px rgba(18, 18, 18, 0.6);
+.button:hover {
+  box-shadow: 0 0 5px 5px rgba(255, 166, 0, 0.3);
 }
 
 i {
@@ -296,4 +385,16 @@ i {
 
 .flex_ai_center {
   align-items: center;
+}
+
+.flex_ai_base {
+  align-items: baseline;
+}
+
+.flex_100>* {
+  flex: 1 0 0;
+}
+
+.gap1rem {
+  gap: 1rem;
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 import dom from "./dom.js";
+import formular from "./formular.js";
 
 const render = {
   createHero(hero) {
@@ -25,14 +26,15 @@ const render = {
     elBtn.href = btn.href
     const elIcon = dom.create(false, 'i', false, btn.icon);
     elBtn.prepend(elIcon);
-
   },
+
   createArticle(content) {
     const elHeader = dom.create(content.header, 'h2', dom.$(content.container));
     for (let item of content.content) {
       dom.create(item.paragraph, 'p', dom.$(content.container))
     }
   },
+
   createSkill(skill) {
     // Quellen für Logos
     // By W3C - http://www.w3.org/html/logo/index.html, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=12868160
@@ -52,6 +54,22 @@ const render = {
       dom.create(`${key.keyword} `, 'small', elCaption);
     }
     dom.create(skill.desc, 'p', elCaption)
+  },
+
+  createFormular(form) {
+    console.log('form', form);
+    if (form.fields) {
+      console.log(form.fields);
+      formular.createFields(form.fields);
+    } 
+    if (form.checkbox) {
+      console.log(form.checkbox);
+      formular.createCheckbox(form.checkbox);
+    } 
+    if (form.submit) {
+      console.log(form.submit);
+      formular.createSubmit(form.submit);
+    }
   }
 }
 
