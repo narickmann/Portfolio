@@ -58,7 +58,7 @@
     },
     "submit": {
       "tag": "button",
-      "type": "submit",
+      "type": "button",
       "value": "<i class=\"fa-regular fa-paper-plane\"></i> Absenden",
       "class": "button"
     }

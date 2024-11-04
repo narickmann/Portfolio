@@ -57,17 +57,13 @@ const render = {
   },
 
   createFormular(form) {
-    console.log('form', form);
     if (form.fields) {
-      console.log(form.fields);
       formular.createFields(form.fields);
     } 
     if (form.checkbox) {
-      console.log(form.checkbox);
       formular.createCheckbox(form.checkbox);
     } 
     if (form.submit) {
-      console.log(form.submit);
       formular.createSubmit(form.submit);
     }
   }

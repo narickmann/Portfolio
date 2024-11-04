@@ -26,7 +26,6 @@ const ajax = {
         render.createSkill(skill);
       }
     } else if (payload.form) {
-      console.log("payload.form", payload.form);
       render.createFormular(payload.form);
     }
     else {

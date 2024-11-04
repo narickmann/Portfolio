@@ -227,7 +227,7 @@ main {
 /* ----------------------------------------------- */
 
 form {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .input_label>input {
@@ -273,9 +273,28 @@ textarea:focus {
   transition: 0.3s;
 }
 
-.input_label input:focus+label,
-.input_label input:valid+label,
+.error_message {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  z-index: 50;
+
+  color: #fc4079;
+  background-color: #311d23;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+.hide_message {
+  display: none;
+}
+
+
+input:focus+label,
 textarea:focus+label,
+input:valid+label,
 textarea:not(:placeholder-shown)+label {
   color: #bdbdbd;
   top: -40px;
@@ -295,10 +314,15 @@ form .button {
   padding: 0;
 }
 
-.ds_label {
-  font: 0.8rem "Quicksand", sans-serif;
+.ds_container {
+  position: relative;
+}
+
+#dschutz+.ds_label {
+  font: 0.9rem "Quicksand", sans-serif;
   margin-bottom: 2rem;
   line-height: 1.2rem;
+  color: #F5F5F5;
 }
 
 .ds_label a {
