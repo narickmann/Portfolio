@@ -71,6 +71,8 @@ const dom = {
     elements.article = dom.$$('article[id*="page"]');
     elements.nav = dom.$$('#topnav a');
     elements.form = dom.$('form');
+    
+    elements.animatedBtns = [dom.$('a[href="#page4"')];
   }
 }
 

@@ -2,6 +2,7 @@
 
 import dom from "./dom.js";
 import formular from "./formular.js";
+import { elements } from "./settings.js";
 
 const render = {
   createHero(hero) {
@@ -26,6 +27,8 @@ const render = {
     elBtn.href = btn.href
     const elIcon = dom.create(false, 'i', false, btn.icon);
     elBtn.prepend(elIcon);
+
+    elements.animatedBtns.push(elBtn);
   },
 
   createArticle(content) {
