@@ -59,14 +59,76 @@ const render = {
   createFormular(form) {
     if (form.fields) {
       formular.createFields(form.fields);
-    } 
+    }
     if (form.checkbox) {
       formular.createCheckbox(form.checkbox);
-    } 
+    }
     if (form.submit) {
       formular.createSubmit(form.submit);
     }
+  },
+
+  createSuccessModal() {
+    const h2Txt = "Erfolgreich gesendet!";
+    const text = "Vielen Dank für Deine Nachricht. Ich werde mich bald bei Dir melden.";
+
+    const elParent = dom.$('#page4')
+    const elContainer = dom.create(false, 'div', elParent, 'modal');
+    elContainer.id = 'success_modal';
+
+    elContainer.addEventListener('click', () => {
+      render.handleClose(elContainer)
+    });
+
+    const contentContainer = dom.create(false, 'div', elContainer, 'modal_content');
+
+    const headerContainer = dom.create(false, 'div', contentContainer, 'flex_container flex_jc_between flex_ai_center');
+    dom.create(h2Txt, 'h2', headerContainer);
+
+    const elClose = dom.create('&times;', 'span', headerContainer, 'close_modal');
+    elClose.id = 'close_success';
+    elClose.addEventListener('click', () => {
+      render.handleClose(elContainer)
+    });
+
+    dom.create(text, 'p', contentContainer);
+    return elContainer;
+  },
+
+  createErrorModal() {
+    const h2Txt = "Fehler beim Senden!";
+    const text = "Es gab ein Problem beim Senden der Nachricht. Bitte versuche es (später) erneut.";
+
+    const elParent = dom.$('#page4')
+    const elContainer = dom.create(false, 'div', elParent, 'modal');
+    elContainer.id = 'error_modal';
+
+    elContainer.addEventListener('click', () => {
+      render.handleClose(elContainer)
+    });
+
+    const contentContainer = dom.create(false, 'div', elContainer, 'modal_content');
+
+    const headerContainer = dom.create(false, 'div', contentContainer, 'flex_container flex_jc_between flex_ai_center');
+    dom.create(h2Txt, 'h2', headerContainer);
+
+    const elClose = dom.create('&times;', 'span', headerContainer, 'close_modal');
+    elClose.id = 'close_error';
+    elClose.addEventListener('click', () => {
+      render.handleClose(elContainer)
+    });
+
+    dom.create(text, 'p', contentContainer);
+    return elContainer;
+  },
+
+  handleClose(container) {
+    const body = dom.$('body');
+    body.classList.remove('no_scroll');
+    container.classList.remove('show_modal');
+    container.remove();
   }
+
 }
 
 export default render;

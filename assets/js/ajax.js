@@ -38,7 +38,7 @@ const ajax = {
     const xhr = new XMLHttpRequest();
 
     // 2. Definieren, was wie geladen werden soll
-    xhr.open('get', `../data/${file}`);
+    xhr.open('get', `./data/${file}`);
 
     // 3. Eventlistener für das Laden
     xhr.addEventListener('load', ajax.handleLoaded)

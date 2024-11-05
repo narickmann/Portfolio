@@ -1,6 +1,7 @@
 'use strict';
 
 import dom from "./dom.js";
+import render from "./render.js";
 import { elements } from "./settings.js";
 
 const formular = {
@@ -80,7 +81,6 @@ const formular = {
     else if (input.type === "email") {
       const regex = /^[\w.+-]{2,}\@[\w.-]{2,}\.[a-z]{2,6}$/;
       isValid = regex.test(input.value.trim());
-      console.log('Validierung für E-Mail:', isValid, input.value);
       if (!isValid) {
         errorTxt = 'Bitte eine gültige E-Mail-Adresse eingeben.';
       }
@@ -111,7 +111,8 @@ const formular = {
     }
   },
 
-  checkOnSubmit() {
+  checkOnSubmit(event) {
+    event.preventDefault();
     const elForm = elements.form;
     const elInputs = Array.from(elForm.querySelectorAll('input, textarea'));
 
@@ -135,7 +136,65 @@ const formular = {
         errorMessage.textContent = '';
         errorMessage.classList.add('hide_message');
       }
+
     })
+
+    if (isValid) {
+      formular.handleSubmit(event, isValid);
+    }
+  },
+
+  handleSubmit(event, isValid) {
+    event.preventDefault();
+
+    if (!isValid) {
+      console.warn("Formular ist ungültig. Abbruch.");
+      return;
+    }
+
+    const form = elements.form;
+    if (!form) {
+      console.error("Formular-Element wurde nicht gefunden.");
+      return;
+    }
+
+    const formData = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "./mailer.php");
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.info("Formular erfolgreich versendet:", xhr.responseText);
+          formular.showModal(true)
+        } else if (xhr.status === 404) {
+          console.error("Fehler: Datei nicht gefunden (404).");
+          formular.showModal(false)
+        } else {
+          console.warn("Fehler beim Senden des Formulars:", xhr.responseText);
+          formular.showModal(false)
+        }
+      }
+    };
+
+    xhr.send(formData);
+  },
+
+  showModal(success) {
+    const body = dom.$('body');
+    body.classList.add('no_scroll');
+
+    if (success) {
+      const successModal = render.createSuccessModal();
+      if (successModal) {
+        successModal.classList.add('show_modal');
+      }
+    } else {
+      const errorModal = render.createErrorModal();
+      if (errorModal) {
+        errorModal.classList.add('show_modal')
+      }
+    }
   }
 
 }
