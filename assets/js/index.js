@@ -3,6 +3,7 @@
 import ajax from "./ajax.js";
 import { btnAnimation } from "./btnAnimation.js";
 import dom from "./dom.js";
+import { handleHeader } from "./header.js";
 
 // KONSTANTEN / VARIABLEN
 
@@ -15,6 +16,7 @@ const init = () => {
   ajax.loadData('formular.json');
   dom.mapping();
   btnAnimation();
+  handleHeader();
 }
 
 // INIT

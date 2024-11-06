@@ -12,7 +12,10 @@ const button = {
 
       btn.classList.add("button_animation");
       btn.classList.contains('button') ? true : btn.classList.add('bg_animation');
+      const active = btn.classList.contains('active');
+      if (active) btn.classList.remove('active');
       setTimeout(() => {
+        if (active) btn.classList.add('active');
         btn.classList.remove("button_animation");
         btn.classList.contains('button') ? true : btn.classList.remove('bg_animation');
       }, 2500);

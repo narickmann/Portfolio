@@ -69,6 +69,7 @@ const dom = {
     elements.parentContents = dom.$('main');
     elements.hero = dom.$('#page1');
     elements.article = dom.$$('article[id*="page"]');
+    elements.header = dom.$('#topheader');
     elements.nav = dom.$$('#topnav a');
     elements.form = dom.$('form');
     
