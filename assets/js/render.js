@@ -59,6 +59,37 @@ const render = {
     dom.create(skill.desc, 'p', elCaption)
   },
 
+  createProjectCard(slider) {
+    const elParent = dom.$('.card_container');
+    const cardContainer = dom.create(false, 'div', elParent, 'card');
+
+    const imgContainer = dom.create(false, 'div', cardContainer, 'card_img');
+    const src = `./assets/img/${slider.img.src}`;
+    dom.createImg(imgContainer, src, slider.img.alt, 'cover');
+
+    const contentContainer = dom.create(false, 'div', cardContainer, 'card_content');
+     dom.create(slider.name, 'h3', contentContainer);
+    dom.create(slider.desc, 'p', contentContainer);
+
+    const linkList = dom.create(false, 'ul', contentContainer);
+    for(let link in slider.links) {
+      const linkData = slider.links[link];
+      const listItem = dom.create(false, 'li', linkList);
+      const elLink = dom.create(linkData.text, 'a', listItem);
+      elLink.href = linkData.href;
+      elLink.target = '_blank';
+
+      const elIcon = document.createElement('i');
+      if (link === 'github') {
+        elIcon.className = 'fa-brands fa-github';
+      } else if (link === 'demo') {
+        elIcon.className = 'fa-solid fa-arrow-up-right-from-square';
+      }
+      elLink.prepend(elIcon);
+    }
+    return cardContainer;
+  },
+
   createFormular(form) {
     if (form.fields) {
       formular.createFields(form.fields);

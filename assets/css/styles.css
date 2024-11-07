@@ -108,7 +108,7 @@ html {
   height: 2px;
   display: block;
   background: linear-gradient(120deg, #ffa600 0%, #fc4079 60%);
-  box-shadow: 0 0 4px  1px rgba(245, 245, 245, 0.2);
+  box-shadow: 0 0 4px 1px rgba(245, 245, 245, 0.2);
   transform: scaleX(0);
   transition: 0.5s;
 }
@@ -262,6 +262,146 @@ main {
 
 #page2 figcaption small {
   color: #aaa
+}
+
+/* ----------------------------------------------- */
+/* ------------- Section 3 - Projekte ------------ */
+/* ----------------------------------------------- */
+.slider {
+  position: relative;
+}
+
+.card_container {
+  position: relative;
+  width: 50vw;
+  min-height: 650px;
+  overflow: hidden;
+  background: #121212;
+  border-radius: 10px;
+  margin: 2rem auto 0;
+  background: linear-gradient(120deg, #ffa600 0%, #fc4079 60%);
+}
+
+.card {
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  margin: 0.25rem;
+  background: #1a1a1a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_img {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.card_content ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.card_content a {
+  color: #F5F5F5;
+  text-decoration: none;
+  line-height: 48px;
+  padding: 0.5rem 1rem;
+  border-radius: 1000px;
+  border: 1px solid #ffa600;
+  transition: 0.3s;
+}
+
+.card_content a:hover {
+  background: rgba(255, 166, 0, 0.5);
+  box-shadow: 0 0 4px 2px rgba(245, 245, 245, 0.3);
+}
+
+#arrow_left,
+#arrow_right {
+  background: rgba(245, 245, 245, 0.3);
+  color: #121212;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#arrow_left:hover,
+#arrow_right:hover {
+  background: rgba(245, 245, 245, 0.6);
+}
+
+#arrow_left {
+  left: 15%;
+}
+
+#arrow_right {
+  right: 15%;
+}
+
+#arrow_left i,
+#arrow_right i {
+  padding: 0; 
+}
+
+.next_slide_out {
+  animation: nextSlideOut 1s forwards;
+}
+
+.next_slide_in {
+  animation: nextSlideIn 1s forwards;
+}
+
+@keyframes nextSlideOut {
+  from { transform: translateX(0) }
+  to { transform: translateX(-100%) }
+}
+
+@keyframes nextSlideIn {
+  from { transform: translateX(100%) }
+  to { transform: translateX(0) }
+}
+
+.prev_slide_out {
+  animation: prevSlideOut 1s forwards;
+}
+
+.prev_slide_in {
+  animation: prevSlideIn 1s forwards;
+}
+
+@keyframes prevSlideOut {
+  from { transform: translateX(0) }
+  to { transform: translateX(100%) }
+}
+
+@keyframes prevSlideIn {
+  from { transform: translateX(-100%) }
+  to { transform: translateX(0) }
+}
+
+.hidden {
+  display: none;
 }
 
 /* ----------------------------------------------- */

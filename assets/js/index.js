@@ -13,6 +13,7 @@ const init = () => {
   ajax.loadData('hero.json');
   ajax.loadData('contents.json');
   ajax.loadData('skills.json');
+  ajax.loadData('slider_content.json');
   ajax.loadData('formular.json');
   dom.mapping();
   btnAnimation();

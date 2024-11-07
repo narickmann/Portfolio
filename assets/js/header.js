@@ -3,7 +3,7 @@
 import dom from "./dom.js";
 import { elements } from "./settings.js";
 
-function handleHeaderShrink() {
+const handleHeaderShrink = () => {
   const header = elements.header;
 
   window.addEventListener('scroll', () => {
@@ -12,7 +12,7 @@ function handleHeaderShrink() {
   });
 }
 
-function handleActiveLink() {
+ const handleActiveLink = () => {
   const options = {
     root: null,
     rootMargin: '0px',
@@ -36,7 +36,7 @@ function handleActiveLink() {
   });
 }
 
-function handleNavClick() {
+ const handleNavClick = () => {
   const navLinks = elements.nav;
   const header = elements.header;
 

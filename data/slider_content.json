@@ -1,0 +1,64 @@
+{
+  "slider": [
+    {
+      "name": "Portfolio",
+      "desc": "Eine kurze Beschreibung des Projektes. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium ratione harum cumque, illum ab voluptatibus eum sunt reiciendis delectus.",
+      "img": {
+        "src": "Portfolio.jpg",
+        "alt": "Projekt 1, Portfolio"
+      },
+      "links": {
+        "github": { "href": "https://github.com/narickmann/Portfolio", "text": "Github" },
+        "demo": { "href": "#!", "text": "Demo" }
+      }
+    },
+    {
+      "name": "Projekt 2",
+      "desc": "Eine kurze Beschreibung des Projektes. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium ratione harum cumque, illum ab voluptatibus eum sunt reiciendis delectus.",
+      "img": {
+        "src": "Platzhalter_Bild.jpg",
+        "alt": "Projekt 2"
+      },
+      "links": {
+        "github": { "href": "#!", "text": "Github" },
+        "demo": { "href": "#!", "text": "Demo" }
+      }
+    },
+    {
+      "name": "Projekt 3",
+      "desc": "Eine kurze Beschreibung des Projektes. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium ratione harum cumque, illum ab voluptatibus eum sunt reiciendis delectus.",
+      "img": {
+        "src": "Platzhalter_Bild.jpg",
+        "alt": "Projekt 3"
+      },
+      "links": {
+        "github": { "href": "#!", "text": "Github" },
+        "demo": { "href": "#!", "text": "Demo" }
+      }
+    },
+    {
+      "name": "Projekt 4",
+      "desc": "Eine kurze Beschreibung des Projektes. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium ratione harum cumque, illum ab voluptatibus eum sunt reiciendis delectus.",
+      "img": {
+        "src": "Platzhalter_Bild.jpg",
+        "alt": "Projekt 4"
+      },
+      "links": {
+        "github": { "href": "#!", "text": "Github" },
+        "demo": { "href": "#!", "text": "Demo" }
+      }
+    },
+    {
+      "name": "Projekt 5",
+      "desc": "Eine kurze Beschreibung des Projektes. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium ratione harum cumque, illum ab voluptatibus eum sunt reiciendis delectus.",
+      "img": {
+        "src": "Platzhalter_Bild.jpg",
+        "alt": "Projekt 5"
+      },
+      "links": {
+        "github": { "href": "#!", "text": "Github" },
+        "demo": { "href": "#!", "text": "Demo" }
+      }
+    }
+  ]
+}

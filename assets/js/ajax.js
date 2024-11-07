@@ -1,6 +1,7 @@
 'use strict';
 
 import render from "./render.js";
+import { handleSlider } from "./slider.js";
 
 const ajax = {
   handleLoaded(event) {
@@ -25,6 +26,8 @@ const ajax = {
       for (let skill of payload.skills) {
         render.createSkill(skill);
       }
+    } else if (payload.slider) {
+      handleSlider(payload.slider);
     } else if (payload.form) {
       render.createFormular(payload.form);
     }
