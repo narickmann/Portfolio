@@ -255,7 +255,7 @@ main {
 }
 
 #page2 figcaption p {
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   line-height: 1.2rem;
   margin: 0.5rem auto;
 }
@@ -273,7 +273,7 @@ main {
 
 .card_container {
   position: relative;
-  width: 50vw;
+  width: 70vw;
   min-height: 650px;
   overflow: hidden;
   background: #121212;
@@ -352,11 +352,11 @@ main {
 }
 
 #arrow_left {
-  left: 15%;
+  left: 0;
 }
 
 #arrow_right {
-  right: 15%;
+  right: 0;
 }
 
 #arrow_left i,
@@ -407,9 +407,50 @@ main {
 /* ----------------------------------------------- */
 /* ------------- Section 4 - Kontakt ------------- */
 /* ----------------------------------------------- */
+#page4{
+  display: flex;
+  gap: 2rem;
+}
+
+#page4 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page4 h2 {
+  margin-right: auto;
+}
+
+.kontakt {
+  width: 100%;
+  padding: 1rem 0.5rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 4px rgba(245, 245, 245, 0.08);
+}
+
+.kontakt_info {
+  color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+.small_foto {
+  max-width: 150px;
+  border: 2px solid #F5F5F5;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  box-shadow: 0 0 10px 10px rgba(18, 18, 18, 0.6);
+}
 
 form {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .input_label>input {
@@ -431,6 +472,7 @@ textarea {
   border-bottom: 3px solid #bdbdbd;
   padding: 0.5rem;
   border-radius: 5px;
+  box-shadow: 0 0 10px 4px rgba(245, 245, 245, 0.08);
 }
 
 input:focus,
@@ -554,9 +596,23 @@ form .button {
 /* ---------- generelle Klassen/Elemente --------- */
 /* ----------------------------------------------- */
 article[id*="page"] {
-  box-shadow: 0 0 5px 5px rgba(18, 18, 18, 0.4);
-  padding: 2% 4%;
+  padding: 4% 0;
   min-height: 100vh;
+  position: relative;
+  width: 80vw;
+  margin: auto;
+}
+
+article[id*="page"]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(120deg, #ffa600 0%, #fc4079 60%);
+  opacity: 0.3;
+  box-shadow: 0 0 6px 2px rgba(245, 245, 245, 0.1);
 }
 
 .cover {
@@ -585,9 +641,12 @@ p {
   font-variation-settings: 'wght' 600;
   text-align: center;
   cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 .button:hover {
+  transform: scale(1.01);
   box-shadow: 0 0 5px 5px rgba(255, 166, 0, 0.3);
 }
 

@@ -36,6 +36,35 @@ const render = {
     for (let item of content.content) {
       dom.create(item.paragraph, 'p', dom.$(content.container))
     }
+    if (content.info) render.createContactInfo(content.info, elHeader.parentElement);
+  },
+
+  createContactInfo(info, parent) {
+    console.log(info);
+    console.log(parent);
+    const elContainer = dom.create(false, 'div', parent, 'kontakt');
+
+    const elContactInfo = dom.create(false, 'div', elContainer, 'kontakt_info');
+
+    const imgContainer = dom.create(false, 'div', elContactInfo, 'small_foto');
+    const src = `./assets/img/${info.img.src}`;
+    dom.createImg(imgContainer, src, info.img.alt);
+
+    const contactContainer = dom.create(false, 'div', elContactInfo);
+    for (let contact of info.contact) {
+      const elParagraph = dom.create(contact.text, 'p', contactContainer);
+
+      const elIcon = dom.create(false, 'i', false, contact.icon);
+      elParagraph.prepend(elIcon);
+    }
+
+    const btn = info.button;
+    const elBtn = dom.create(btn.content, 'a', elContainer, 'button');
+    elBtn.href = btn.href
+    elBtn.download = btn.download
+
+    const elIcon = dom.create(false, 'i', false, btn.icon);
+    elBtn.prepend(elIcon);
   },
 
   createSkill(skill) {
@@ -68,11 +97,11 @@ const render = {
     dom.createImg(imgContainer, src, slider.img.alt, 'cover');
 
     const contentContainer = dom.create(false, 'div', cardContainer, 'card_content');
-     dom.create(slider.name, 'h3', contentContainer);
+    dom.create(slider.name, 'h3', contentContainer);
     dom.create(slider.desc, 'p', contentContainer);
 
     const linkList = dom.create(false, 'ul', contentContainer);
-    for(let link in slider.links) {
+    for (let link in slider.links) {
       const linkData = slider.links[link];
       const listItem = dom.create(false, 'li', linkList);
       const elLink = dom.create(linkData.text, 'a', listItem);
