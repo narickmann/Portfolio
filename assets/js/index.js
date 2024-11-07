@@ -15,6 +15,8 @@ const init = () => {
   ajax.loadData('skills.json');
   ajax.loadData('slider_content.json');
   ajax.loadData('formular.json');
+  ajax.loadData('impressum.json');
+  ajax.loadData('datenschutz.json');
   dom.mapping();
   btnAnimation();
   handleHeader();

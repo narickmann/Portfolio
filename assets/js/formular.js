@@ -46,7 +46,7 @@ const formular = {
     elCheck.value = checkbox.value;
     elCheck.classList.add('ds_checker')
 
-    const labelContent = checkbox.label.replace("[LINK]", `<a href="${checkbox.link.href}">${checkbox.link.text}</a>`);
+    const labelContent = checkbox.label.replace("[LINK]", `<a href="${checkbox.link.href}" class="${checkbox.link.class}">${checkbox.link.text}</a>`);
     const elLabel = dom.create(labelContent, 'label', elContainer, 'ds_label');
     elLabel.classList.add('ds_label');
 

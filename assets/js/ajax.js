@@ -1,5 +1,6 @@
 'use strict';
 
+import impressumAndDs from "./impressum-datenschutz.js";
 import render from "./render.js";
 import { handleSlider } from "./slider.js";
 
@@ -30,6 +31,11 @@ const ajax = {
       handleSlider(payload.slider);
     } else if (payload.form) {
       render.createFormular(payload.form);
+    } else if (payload.impressum) {
+      impressumAndDs.createImpressum(payload.impressum);
+      
+    } else if (payload.datenschutz) {
+      impressumAndDs.createDatenschutz(payload.datenschutz);
     }
     else {
       console.warn('Inhalt konnte nicht geladen werden.');

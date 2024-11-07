@@ -1,0 +1,18 @@
+{
+  "impressum": {
+    "sections": [
+      {
+        "title": "Impressum",
+        "content": "Nadine Rickmann<br>Musterstr. 1<br>12345 Osnabrück"
+      },
+      {
+        "title": "Kontakt",
+        "content": "<i class=\"fa-solid fa-phone\"></i> +49 (0) 176 123 456 789<br><i class=\"fa-solid fa-envelope\"></i> nadine.rickmann@muster.de"
+      },
+      {
+        "title": "Quelle",
+        "content": "Quelle: <a href=\"https://www.e-recht24.de\" target=\"_blank\" title=\"Folge dem Link für mehr Informationen unter https://www.e-recht24.de\">https://www.e-recht24.de</a>"
+      }
+    ]
+  }
+}

@@ -72,8 +72,9 @@ const dom = {
     elements.header = dom.$('#topheader');
     elements.nav = dom.$$('#topnav a');
     elements.form = dom.$('form');
-    
     elements.animatedBtns = [dom.$('a[href="#page4"')];
+    elements.impressum = dom.$('#impressum_overlay > .overlay_content');
+    elements.datenschutz = dom.$('#datenschutz_overlay > .overlay_content');
   }
 }
 

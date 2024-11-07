@@ -52,7 +52,8 @@
       "label": "Ich habe die [LINK] zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Bearbeitung der Anfrage elektronisch erhoben und gespeichert werden.",
       "link": {
         "text": "Datenschutzerklärung",
-        "href": "#"
+        "href": "#!",
+        "class": "open_datenschutz"
       },
       "required": true
     },

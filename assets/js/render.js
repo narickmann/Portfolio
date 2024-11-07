@@ -40,8 +40,6 @@ const render = {
   },
 
   createContactInfo(info, parent) {
-    console.log(info);
-    console.log(parent);
     const elContainer = dom.create(false, 'div', parent, 'kontakt');
 
     const elContactInfo = dom.create(false, 'div', elContainer, 'kontakt_info');
