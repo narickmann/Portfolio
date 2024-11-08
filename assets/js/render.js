@@ -3,6 +3,7 @@
 import dom from "./dom.js";
 import formular from "./formular.js";
 import { elements } from "./settings.js";
+import { typewriteEffect } from "./typewrite-effect.js";
 
 const render = {
   createHero(hero) {
@@ -19,7 +20,9 @@ const render = {
     const elCaption = dom.create(false, 'figcaption', elFigure, 'hero_text flex_container flex_column flex_jc_even flex_ai_center');
 
     dom.create(hero.content[0].paragraph, 'p', elCaption);
-    dom.create(hero.header, 'h1', elCaption);
+    const heading = dom.create(hero.header, 'h1', elCaption, 'typewriter');
+    document.addEventListener('DOMContentLoaded', typewriteEffect(heading))
+    
     dom.create(hero.content[1].paragraph, 'p', elCaption, 'h2');
 
     const btn = hero.button;
