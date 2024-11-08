@@ -598,7 +598,6 @@ form .button {
 
   /* Impressum und Datenschutz Overlay */
 .overlay {
-  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -643,7 +642,6 @@ form .button {
 .overlay_content h2,
 .overlay_content h3,
 .overlay_content h4 {
-  /* margin-right: auto; */
   display: inline-block; 
   padding: 1rem 0;
   font-variation-settings: 'wght' 500;
@@ -706,7 +704,6 @@ article[id*="page"]::after {
 
 p {
   line-height: 1.6rem;
-  /* font-size: 1rem; */
   margin: 1rem 0;
 }
 

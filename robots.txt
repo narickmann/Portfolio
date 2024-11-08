@@ -1,5 +1,5 @@
 User-agent:*
-Disallow: /img/
+Disallow: /assets/img/
 Disallow: /Lebenslauf_Nadine_Rickmann.pdf
 
 Sitemap: sitemap.xml
