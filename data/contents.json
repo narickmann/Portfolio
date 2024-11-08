@@ -40,6 +40,10 @@
           {
             "text": "nadine.rickmann@mail.de",
             "icon": "fa-solid fa-envelope"
+          },
+          {
+            "text": "<a href=\"https://github.com/narickmann\" target=\"_blank\">GitHub</a>",
+            "icon": "fa-brands fa-github"
           }
         ],
         "button": {

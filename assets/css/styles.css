@@ -433,6 +433,17 @@ main {
   box-shadow: 0 0 10px 4px rgba(245, 245, 245, 0.08);
 }
 
+.kontakt_info a {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.kontakt_info a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  transition: 0.5s;
+}
+
 .kontakt_info {
   color: #F5F5F5;
   display: flex;
