@@ -14,13 +14,13 @@
     },
     {
       "name": "Projekt 2",
-      "desc": "Eine kurze Beschreibung des Projektes. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium ratione harum cumque, illum ab voluptatibus eum sunt reiciendis delectus.",
+      "desc": "React-Projekt im Rahmen eines JS-Kurses. <br>Zur Vertiefung von Themen wie JavaScript, React, Webserver mit Express für die Kommunikation zwischen Frontend und Backend, Verwendung von CouchDB mit Nano für die Datenbankanbindung, API-Anfragen mit der fetch()-Methode.",
       "img": {
-        "src": "Platzhalter_Bild.jpg",
-        "alt": "Projekt 2"
+        "src": "Rezept-App.jpg",
+        "alt": "Projekt 2, Rezepte-App"
       },
       "links": {
-        "github": { "href": "#!", "text": "Github" },
+        "github": { "href": "https://github.com/narickmann/rezepte-app", "text": "Github" },
         "demo": { "href": "#!", "text": "Demo" }
       }
     },
